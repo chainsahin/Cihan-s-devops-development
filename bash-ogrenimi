@@ -1,1 +1,31 @@
+# Linux/Bash & Python Setup - Day 1
 
+## 1. Command Line Fundamentals (CLI)
+
+### A. Navigation and Inspection (Gezinme ve İnceleme)
+- `pwd` (Shows the current directory/location)
+- `ls` (Lists files and directories)
+- `ls -al` (Detailed list, including hidden files)
+- `cd <directory>` (Change Directory)
+- `cd ..` (Moves up to the parent directory)
+
+### B. File and Directory Management (Dosya ve Dizin Yönetimi)
+- `mkdir <name>` (Creates a new directory)
+- `rmdir <name>` (Removes an empty directory)
+- `touch <filename>` (Creates an empty file)
+- `rm <filename>` (Removes a file)
+- `rm -r <directory>` (Recursively removes a directory and its contents)
+
+### C. Copying, Moving, and Permissions (Kopyalama, Taşıma ve İzinler)
+- `cp <source> <destination>` (Copies files or directories)
+- `mv <source> <destination>` (Moves or renames files/directories)
+- `sudo` (Executes a command with superuser/root privileges)
+- `chown <user>:<group> <file>` (Changes file ownership)
+- `chgrp <group> <file>` (Changes file group ownership)
+
+## 2. Initial Python Setup
+- Python extension installed in Visual Studio Code.
+- System PATH configurations checked and verified.
+
+## 3. Next Steps (Summary of Day's Progress)
+- Tomorrow's Focus: Moving on to `if/else` control flow structures in Bash scripting.
