@@ -1,0 +1,35 @@
+
+
+This session focused on making scripts dynamic by managing variables, handling command-line input, and introducing automated scheduling.
+
+## 1. Core Scripting Syntax and Variables
+
+**Goal:** Understanding the basic structure of a script and managing data within it.
+
+| Concept / Command | Usage / Example | Explanation |
+| :--- | :--- | :--- |
+| `#! /bin/bash` | Top line of every script. | The **Shebang**. Specifies the Bash interpreter for execution. |
+| `MY_VAR="Value"` | `MY_VAR=25` | Defining custom variables (Strings and Integers). |
+| `echo $BASH` | `echo $HOSTNAME` | Accessing system-level environment variables. |
+| `echo $HOME` | `echo $PWD` | Accessing user-specific environment variables (Home Directory, Present Working Directory). |
+
+## 2. Command Line Input and Argument Handling
+
+**Goal:** Receiving and processing data passed by the user during script execution.
+
+| Symbol / Command | Usage / Example | Explanation |
+| :--- | :--- | :--- |
+| `echo $@` | `./script.sh arg1 arg2` outputs: `arg1 arg2` | Captures and prints **all** command-line arguments as a single string. |
+| `girilen_argumanlar=("$@")` | `echo ${girilen_argumanlar[0]}` | Stores all arguments in an **Array**. Allows access to individual elements using **Index** (e.g., [0] for the first argument). |
+| `$#` | (To be used later) | **Counts** the number of arguments passed to the script. (Used for input validation). |
+| `mv <script> /bin/` | `chmod +x <script>` then `./<script>` | **Script Accessibility:** Making the script executable from any location via the $PATH environment variable. |
+
+## 3. Automated Scheduling (Cron Job)
+
+**Goal:** Running repetitive administrative tasks at scheduled times without manual intervention.
+
+| Concept / Command | Usage / Example | Explanation |
+| :--- | :--- | :--- |
+| `crontab` | `nano /etc/crontab` | Linux tool for scheduling recurring tasks. |
+| `* * * * * user command` | `* * * * * cihan date >> /path/to/file` | Cron format: Runs the `date` command every minute and appends the output to the specified file. |
+
