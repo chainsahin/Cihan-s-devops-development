@@ -1,8 +1,9 @@
- DevOps Learning Log: Linux/Bash Fundamentals - Day 2
+# 🚀 DevOps Learning Log: Linux/Bash Fundamentals - Day 2 (UPDATED)
 
-1. Archiving and Compression (`tar`)
+This session focused on essential system administration tasks crucial for managing servers, interpreting logs, and controlling services in a cloud environment.
 
-**Goal:** Bundling files for easy backup, distribution, and archival purposes (creating "tarballs").
+## 1. Archiving and Compression Commands (`tar`)
+**Goal:** Bundling files for easy backup and distribution (creating "tarballs").
 
 | Command | Full Command | Explanation |
 | :--- | :--- | :--- |
@@ -10,18 +11,18 @@
 | `tar -xf` | `tar -xf archive.tar` | Extract File. Extracts the contents of a `.tar` file. |
 | `tar -xvf` | `tar -xvf archive.tar` | Extract Verbose File. Extracts and lists the files being processed. |
 
- 2. I/O Redirection and Piping
+## 2. I/O Redirection and Piping
 
 **Goal:** Controlling data flow between commands and files—fundamental for log analysis and simple automation.
 
 | Symbol / Command | Usage | Explanation |
 | :--- | :--- | :--- |
-| `>` | `command > file.txt` | Redirects standard output (stdout) to a file, overwriting the content. |
-| `2>>` | `command 2>> errors.log` | Redirects standard error output (stderr) and **appends** it to a file. |
+| `>` | `command > file.txt` | Redirects standard output (stdout) to a file, **overwriting** the content. |
+| `2>>` | `command 2>> errors.log` | Redirects standard **error** output (stderr) and **appends** it to a file. |
 | `|` | `ls -l | grep .sh` | Pipe. Sends the output of the first command as the input to the second command. |
 | `grep` | `grep 'ERROR' logs.txt` | Filters file content to search for lines matching a specified pattern/string. |
 
- 3. File Viewing and Log Analysis
+## 3. File Viewing and Log Analysis
 
 **Goal:** Quickly inspecting large files and tracking system events.
 
@@ -30,16 +31,27 @@
 | `cat` | `cat config.yaml` | Concatenates files; often used to display the **entire content** of a small file. |
 | `more` | `more access.log` | Displays file content one screen at a time, allowing controlled viewing. |
 | `head -n` | `head -n 10 file.txt` | Displays the **first 'n' lines** of a file. |
-| `tail -n` | `tail -n 10 file.txt` | Displays the **last 'n' lines** of a file. (`tail -f` is used for real-time monitoring of growing logs). |
+| `tail -n` | `tail -n 10 file.txt` | Displays the **last 'n' lines** of a file. (`tail -f` is used for real-time log monitoring). |
 
- 4. User and Privilege Management
+## 4. User and Privilege Management
 
 **Goal:** Essential security practices for managing access and running tasks with elevated permissions.
 
 | Command | Usage / Example | Explanation |
 | :--- | :--- | :--- |
-| `sudo su` | `sudo su` | Switches to the **root** (superuser) user account. (Admin access). |
+| `sudo su` | `sudo su` | Switches to the **root** (superuser) user account. |
 | `getent group` | `getent group` | Lists all user groups defined on the system. |
 | `usermod -a -G` | `usermod -a -G docker cihan` | Appends (`-a`) the user to a supplementary Group (`-G`). |
 | `groups` | `groups cihan` | Displays all groups the specified user is a member of. |
 
+## 5. System and Service Management
+
+**Goal:** Managing applications, services, and the firewall on Linux servers.
+
+| Command | Usage / Example | Explanation |
+| :--- | :--- | :--- |
+| `service --status-all` | `service --status-all` | Displays the status (running/stopped) of all available services on the system. |
+| `systemctl status ufw` | `systemctl status ufw` | Checks the status of a specific service (e.g., Uncomplicated Firewall). |
+| `systemctl stop <service_name>` | `systemctl stop nginx` | Stops the specified service. |
+| `systemctl start <service_name>` | `systemctl start apache2` | Starts the specified service. |
+| `systemctl restart <service_name>` | `systemctl restart sshd` | Stops and then starts the specified service. |
