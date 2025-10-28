@@ -1,0 +1,26 @@
+
+This session introduced user interaction and decision-making logic—the foundation for intelligent automation scripts.
+
+## 1. User Input and Interaction (`read`)
+
+**Goal:** Making scripts dynamic by accepting input from the command line user.
+
+| Command | Usage / Example | Explanation |
+| :--- | :--- | :--- |
+| `read VARIABLE` | `read NAME` | Reads a single line from standard input and stores it in the variable NAME. |
+| `read -p` | `read -p "Enter Name: "` | **P**rompt: Displays a prompt message before reading the input. |
+| `read -a` | `read -a NAMES` | Reads input into an **A**rray variable. |
+| `read -sp` | `read -sp "Password: "` | **S**ilent **P**rompt: Suppresses the display of user input (used for passwords). |
+
+## 2. Conditional Logic (`if/else`)
+
+**Goal:** Allowing the script to execute different commands based on the evaluation of conditions.
+
+| Syntax | Example | Explanation |
+| :--- | :--- | :--- |
+| `if [ condition ] then... else... fi` | `if [ 5 -eq 5 ]; then echo "OK"; fi` | Standard IF-THEN-ELSE decision structure. |
+| `-eq` (Equal) | `if [ $A -eq 10 ]` | Numeric comparison: Checks if two numbers are **equal**. |
+| `-gt` (Greater Than) | `if [ $A -gt 10 ]` | Numeric comparison: Checks if the left number is **greater than** the right. |
+| `-lt` (Less Than) | `if [ $A -lt 10 ]` | Numeric comparison: Checks if the left number is **less than** the right. |
+| `-a` (AND) | `if [ $A -gt 5 -a $B -lt 10 ]` | Logical operator: Executes if **both** conditions are TRUE. |
+| `-o` (OR) | `if [ $A -eq 0 -o $A -eq 1 ]` | Logical operator: Executes if **at least one** condition is TRUE. |
