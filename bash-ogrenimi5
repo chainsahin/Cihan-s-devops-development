@@ -1,0 +1,45 @@
+
+**Status: BASH COMPLETED!** I have all the basics required for the Junior DevOps/Cloud Engineer role
+
+## 1. Looping Structures (Döngü Yapıları)
+
+Mastered all five essential looping mechanisms for automation and repetition.
+
+| Structure | Syntax Example | Purpose |
+| :--- | :--- | :--- |
+| **`for` (C-Style)** | `for (( i=0; i<=10; i++ ))` | Used for basic numerical iteration with defined start, end, and step. |
+| **`for` (List/Sequence)** | `for i in {1..10..2}` | Iterating over lists, arrays, or sequence ranges (the Bash shortcut). |
+| **`while`** | `while (( $i <= 10 ))` | Repeats commands as long as the condition remains **TRUE**. |
+| **`until`** | `until (( $i >= 9 ))` | Repeats commands as long as the condition remains **FALSE**. |
+| **`select` (Menu)** | `select item in choices; do ... done` | Automatically generates an interactive, numbered user menu. |
+| **Flow Control** | `break` / `continue` | **`break`** terminates the loop immediately. **`continue`** skips the current iteration and moves to the next. |
+
+## 2. Conditional Logic and Testing (Koşullu Yapılar)
+
+Advanced techniques for decision-making and checking system states.
+
+| Structure | Syntax Example | Purpose |
+| :--- | :--- | :--- |
+| **Case (Selection)** | `case $1 in "araba") ... esac` | Cleanly handles multiple argument possibilities and options (better than complex `if/elif`). |
+| **File Tests** | `if [ -f $file ]` / `if [ -s $file ]` | Checks if a file exists (`-f`) or if it exists AND is not empty (`-s`). Essential for configuration checks. |
+| **Interactive I/O** | `echo -e "msg: \c"`; `cat >> file` | Allows multi-line input (`cat >>`) and uses `echo -e "\c"` for same-line cursor interaction. |
+
+## 3. Functions and Scope (Fonksiyonlar ve Kapsam)
+
+Building reusable, clean, and organized code blocks.
+
+| Concept | Syntax Example | Importance |
+| :--- | :--- | :--- |
+| **Function Definition** | `function myfunc() { ... }` | Groups repeated commands; enables modular script design. |
+| **Global Access** | Accessing `variable` defined outside the function. | Variables are Global by default; accessible from anywhere in the script. |
+| **Local Scope (Crucial!)** | `local variable="value"` | **Final Critical Principle:** Using `local` prevents variable name collision and ensures variables only exist inside the function (promotes clean code). |
+
+## 4. Advanced Data & Arithmetic (Veri ve Hesaplama)
+
+Managing lists and performing precise calculations.
+
+| Concept | Syntax Example | Purpose |
+| :--- | :--- | :--- |
+| **Arrays (Diziler)** | `names=('a' 'b')`; `echo ${names[@]}` | Stores multiple items in one variable; essential for iterating over lists of servers or users. |
+| **Floating Point Math** | `echo "scale=3; 20.865 / 5" | bc` | Uses the **`bc`** command to perform accurate decimal (float) arithmetic, which native Bash cannot do. |
+| **Traditional Math** | `echo $( expr $a \* $b )` | Learned `expr` as an alternative/traditional method for integer math. |
