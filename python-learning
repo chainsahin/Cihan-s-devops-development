@@ -1,0 +1,26 @@
+
+## 1. Core Syntax and Data Structures (Temel Sözdizimi ve Veri Yapıları)
+
+**Goal:** Mastering Python's unique structures, which are crucial for parsing configuration files (JSON/YAML).
+
+| Concept | Python Structure | Importance |
+| :--- | :--- | :--- |
+| **Containers** | `list` (Listeler), `dict` (Sözlükler), `tuple` | **Crucial for DevOps:** Dictionaries are the fundamental structure for working with JSON data (API responses) and configuration files. |
+| **Logic** | `if/else`, `for`, `while` | Basic control flow structures (mastered earlier in Bash) applied to Python's indentation-based syntax. |
+| **Data Types** | `str`, `int`, `float`, `bool` | Understanding variable types and type checking (`type()`) for data validation. |
+| **OOP Concept** | Functions & Classes | Mastering function definition and fundamental class structure (OOP concepts reinforced from C++). |
+
+## 2. Advanced Control and Error Handling (Gelişmiş Kontrol ve Hata Yönetimi)
+
+**Goal:** Writing reliable automation scripts that do not crash upon encountering errors.
+
+| Concept | Python Syntax | Importance |
+| :--- | :--- | :--- |
+| **Scope Management** | `global` vs. `local` | Understanding how variables are defined inside and outside functions (crucial for bug prevention). |
+| **Error Handling** | `try / except` | The primary method for catching errors gracefully (e.g., if a server request fails) instead of crashing the script. |
+
+## 3. Immediate Next Step (Hemen Sonraki Aşama)
+
+* **Bash Integration:** Python can now be used to replace complex Bash scripts.
+* **Pivot:** Transitioning immediately to installing and utilizing **DevOps-specific Python libraries** for automation and Cloud interaction.
+
